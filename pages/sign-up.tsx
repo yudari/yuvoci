@@ -7,7 +7,7 @@ export default function SignUp() {
   return (
     <section className='sign-up mx-auto pt-lg-100 pb-lg-100 pt-30 pb-47'>
       <div className='container mx-auto'>
-        <form action=''>
+        <div>
           <div className='pb-50'>
             <Link href='/'>
               <a className='navbar-brand'>
@@ -16,7 +16,7 @@ export default function SignUp() {
             </Link>
           </div>
           <SignUpForms />
-        </form>
+        </div>
       </div>
     </section>
   )

@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-sync-scripts */
+/* eslint-disable @next/next/no-page-custom-font */
 import '../styles/utilities.css'
 import '../styles/homepage.css'
 import '../styles/detail.css'
@@ -16,6 +18,8 @@ import '../styles/edit-profile.css'
 import '../styles/navbar-log-in.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -27,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x'
           crossOrigin='anonymous'
         />{' '}
-        q{/* Google Font */}
+        {/* Google Font */}
         <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link
           href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
@@ -46,6 +50,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Component {...pageProps} />
+      <ToastContainer />
     </>
   )
 }

@@ -1,22 +1,25 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import Link from 'next/link'
 import cx from 'classnames'
+import { NumericFormat } from 'react-number-format'
 interface TableRowProps {
   image: string
   title: string
   category: string
-  item: number
+  item: string
   price: number
-  status: 'Pending' | 'Success' | 'Failed'
+  status: string
+  id: string
 }
 export default function TableRow(props: TableRowProps) {
-  const { image, title, category, item, price, status } = props
+  const { image, title, category, item, price, status, id } = props
 
   const statusClass = cx({
     'float-start icon-status': true,
-    pending: status === 'Pending',
-    failed: status === 'Failed',
-    success: status === 'Success',
+    pending: status === 'pending',
+    failed: status === 'failed',
+    success: status === 'success',
   })
 
   return (
@@ -24,7 +27,7 @@ export default function TableRow(props: TableRowProps) {
       <th scope='row'>
         <img
           className='float-start me-3 mb-lg-0 mb-3'
-          src={'/img/' + image + '.png'}
+          src={image}
           width='80'
           height='60'
           alt=''
@@ -39,10 +42,18 @@ export default function TableRow(props: TableRowProps) {
         </div>
       </th>
       <td>
-        <p className='fw-medium color-palette-1 m-0'>{item} Gold</p>
+        <p className='fw-medium color-palette-1 m-0'>{item}</p>
       </td>
       <td>
-        <p className='fw-medium color-palette-1 m-0'>{price}</p>
+        <p className='fw-medium color-palette-1 m-0'>
+          <NumericFormat
+            value={price}
+            prefix='Rp. '
+            displayType='text'
+            thousandSeparator='.'
+            decimalSeparator=','
+          />
+        </p>
       </td>
       <td>
         <div>
@@ -53,7 +64,7 @@ export default function TableRow(props: TableRowProps) {
         </div>
       </td>
       <td>
-        <Link href='/member/transactions/detail'>
+        <Link href={`/member/transactions/${id}`}>
           <a className='btn btn-status rounded-pill text-sm'>Details</a>
         </Link>
       </td>

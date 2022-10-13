@@ -1,21 +1,30 @@
 /* Navbar */
+
+.navbar-light .text-brand {
+  font-size: 42px;
+  color: #22577a;
+  font-weight: bold;
+}
+.navbar-light .text-brand .text-brand-child {
+  color: #82c0cc;
+}
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .show > .nav-link {
   font-weight: 500;
-  color: #0c145a;
+  color: #22577a;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #0c145a;
+  color: #22577a;
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #7e8cac;
+  color: #82c0cc;
 }
 
 .navbar-light .btn-sign-in {
-  color: #0c145a;
-  background-color: #e7eaf5;
+  color: #fff;
+  background-color: #82c0cc;
   padding: 0.75rem 1.875rem;
 }
 /*  */
@@ -27,10 +36,13 @@
 }
 
 .header .btn-get {
-  background-color: #4d17e2;
+  background-color: #82c0cc;
   padding: 0.75rem 3rem;
 }
 
+.header .btn-get:hover {
+  background-color: #22577a;
+}
 .header .btn-learn:hover {
   color: #0c145a;
 }
@@ -43,8 +55,8 @@
 .header .left-card {
   width: 207px;
   height: 112px;
-  top: 6.68rem;
-  left: -3.625rem;
+  top: 14.68rem;
+  left: 10.625rem;
   padding: 0.875rem;
 }
 
@@ -65,14 +77,21 @@
   left: auto;
   right: auto;
 }
+
+.text-card-illust {
+  font-size: 14px;
+  color: #22577a;
+}
 /*  */
 
 /* Feature */
 .feature .feature-card {
-  background-color: #f9faff;
+  background-color: #82c0cc;
   padding: 1.875rem;
   border-radius: 1.625rem;
   margin-right: 16px;
+  height: 274px;
+  max-width: 360px;
 }
 /*  */
 

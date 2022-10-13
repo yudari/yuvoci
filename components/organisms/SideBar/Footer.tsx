@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function Footer() {
@@ -67,13 +68,11 @@ export default function Footer() {
             Be The Winner
           </p>
         </div>
-        <a
-          className='btn btn-get-started w-100 fw-medium text-xs text-center text-white rounded-pill'
-          href='/'
-          role='button'
-        >
-          Get Started
-        </a>
+        <Link href='/'>
+          <a className='btn btn-get-started w-100 fw-medium text-xs text-center text-white rounded-pill'>
+            Get Started
+          </a>
+        </Link>
       </div>
     </div>
   )
