@@ -185,12 +185,14 @@ export default function SignUpSuccess() {
         </div>
         <div className='pt-70 pb-md-50 pb-150'>
           <h2 className='text-4xl fw-bold text-center color-palette-1 mb-10'>
-            Well Done!
+            Selamat
           </h2>
           <p className='text-lg text-center color-palette-1 m-0'>
             Kamu sudah bisa melakukan top up
             <br className='d-sm-block d-none' />
-            dan menjadi pemenang!
+            dan rasakan sensasi bermain game
+            <br className='d-sm-block d-none' />
+            dengan pengalaman terbaru
           </p>
         </div>
         <div className='button-group d-flex flex-column mx-auto'>

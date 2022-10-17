@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function Custom404() {
@@ -341,13 +342,15 @@ export default function Custom404() {
           </p>
         </div>
         <div className='button-group d-flex flex-column mx-auto'>
-          <a
-            className='btn btn-homepage fw-medium text-lg text-white rounded-pill'
-            href='#'
-            role='button'
-          >
-            Homepage
-          </a>
+          <Link href={`/`}>
+            <a
+              className='btn btn-homepage fw-medium text-lg text-white rounded-pill'
+              href='#'
+              role='button'
+            >
+              Homepage
+            </a>
+          </Link>
         </div>
       </div>
     </section>

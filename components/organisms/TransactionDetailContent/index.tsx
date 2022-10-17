@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from 'next/image'
 import React from 'react'
 import { HistoryTransactionTypes } from '../../../services/data-types'
 import Row from './Row'
@@ -13,11 +14,12 @@ export default function TransactionContentDetail(
   const { data } = props
 
   const IMG = process.env.NEXT_PUBLIC_IMG
+  console.log(data)
   return (
     <main className='main-wrapper'>
       <div className='ps-lg-0'>
         <h2 className='text-4xl fw-bold color-palette-1 mb-30'>
-          Details #{data._id}
+          Detail #{data._id}
         </h2>
         <div className='details'>
           <div className='main-content main-content-card overflow-auto'>
@@ -40,7 +42,7 @@ export default function TransactionContentDetail(
                       {data.historyVoucherTopup.gameName}
                     </p>
                     <p className='color-palette-2 m-0'>
-                      Category: {data.historyVoucherTopup.category}
+                      Kategori: {data.historyVoucherTopup.category}
                     </p>
                   </div>
                 </div>
@@ -53,16 +55,16 @@ export default function TransactionContentDetail(
               <hr />
               <div className='purchase pt-30'>
                 <h2 className='fw-bold text-xl color-palette-1 mb-20'>
-                  Purchase Details
+                  Detail Pemesanan
                 </h2>
-                <Row label='Your Game ID' value={data.accountUser} />
-                <Row label='Order ID' value={data._id} />
+                <Row label='ID Akun Game Kamu' value={data.accountUser} />
+                <Row label='ID Order' value={data._id} />
                 <Row
                   label='Item'
                   value={`${data.historyVoucherTopup.coinQuantity} ${data.historyVoucherTopup.coinName}`}
                 />
-                <Row label='Price' value={data.historyVoucherTopup.price} />
-                <Row label='Tax 10%' value={data.tax} />
+                <Row label='Harga' value={data.historyVoucherTopup.price} />
+                <Row label='Pajak 10%' value={data.tax} />
                 <Row
                   label='Total'
                   value={data.value}
@@ -71,20 +73,36 @@ export default function TransactionContentDetail(
               </div>
               <div className='payment pt-10 pb-10'>
                 <h2 className='fw-bold text-xl color-palette-1 mb-20'>
-                  Payment Informations
+                  Informasi Pembayaran
                 </h2>
-                <Row label='Your Account Name' value={data.name} />
-                <Row label='Type' value={data.historyPayment.type} />
-                <Row label='Bank Name ' value={data.historyPayment.bankName} />
+                <Row label='Nama Akun Kamu' value={data.name} />
+                <Row label='Tipe Pembayaran' value={data.historyPayment.type} />
+                <Row label='Nama Bank' value={data.historyPayment.bankName} />
                 <Row
-                  label='Bank Account Name'
+                  label='Nama Akun Bank Admin'
                   value={data.historyPayment.name}
                 />
                 <Row
-                  label='Bank Number'
+                  label='Nomor Rekening Bank Admin'
                   value={data.historyPayment.noRekening}
                 />
               </div>
+
+              <div className='bukti-bayar pt-10 pb-10'>
+                <h2 className='fw-bold text-xl color-palette-1 mb-20'>
+                  Bukti Pembayaran
+                </h2>
+
+                <div className='container-img'>
+                  <Image
+                    src={`${IMG}/${data.buktiBayar}`}
+                    height={500}
+                    width={400}
+                    alt='bg-buktiBayar'
+                  />
+                </div>
+              </div>
+
               <div className='d-md-block d-flex flex-column w-100'>
                 <a
                   className='btn btn-whatsapp rounded-pill fw-medium text-white border-0 text-lg'

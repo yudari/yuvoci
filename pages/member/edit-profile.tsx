@@ -116,7 +116,7 @@ export default function EditProfile() {
                   className='btn btn-save fw-medium text-lg text-white rounded-pill'
                   onClick={onSubmit}
                 >
-                  Save My Profile
+                  Simpan Profil
                 </button>
               </div>
             </div>

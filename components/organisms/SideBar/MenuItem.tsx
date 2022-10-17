@@ -10,7 +10,7 @@ interface MenuItemProps {
     | 'ic-menu-transaction'
     | 'ic-menu-card'
     | 'ic-menu-logout'
-    | 'ic-menu-messages'
+    | 'ic-menu-games'
     | 'ic-menu-reward'
     | 'ic-menu-setting'
   active?: boolean

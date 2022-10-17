@@ -7,13 +7,13 @@ export default function MainBanner() {
       <div className='container-xxl container-fluid'>
         <div className='row flex-row-reverse  gap-lg-0 gap-5'>
           <div className='col-lg-6 col-12 my-auto'>
-            <h1 className='header-title color-palette-1 fw-bold text-end'>
+            <h1 className='header-title text-center text-lg-end color-palette-1 fw-bold text-end'>
               Top up dan <span className='underline-blue'>rasakan</span>
               <br className='d-sm-block d-none' />{' '}
               <span className='underline-blue'>Pengalaman</span> dalam bermain
               anda
             </h1>
-            <p className='mt-0 mb-40 text-lg color-palette-1 text-end'>
+            <p className='mt-0 mb-40 text-lg color-palette-1 text-center text-lg-end '>
               Kami menyediakan voucher top up terlengkap
               <br className='d-md-block d-none' /> dari berbagai platform game
             </p>

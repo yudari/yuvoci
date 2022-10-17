@@ -58,6 +58,7 @@ export default function SignUpPhoto() {
     const getLocalForm = localStorage.getItem('user-form')
     setLocalForm(JSON.parse(getLocalForm!))
   }, [])
+  console.log()
   return (
     <section className='sign-up-photo mx-auto pt-lg-227 pb-lg-227 pt-130 pb-50'>
       <div className='container mx-auto'>
@@ -65,7 +66,7 @@ export default function SignUpPhoto() {
           <div className='form-input d-md-block d-flex flex-column'>
             <div>
               <div className='mb-20'>
-                <div className='image-upload text-center'>
+                <div className='image-upload'>
                   <label htmlFor='avatar'>
                     {imagePreview ? (
                       <img
@@ -114,7 +115,7 @@ export default function SignUpPhoto() {
                 <select
                   id='category'
                   name='category'
-                  className='form-select d-block w-100 rounded-pill text-lg'
+                  className='form-select input-select-category d-block w-100 rounded-pill text-lg'
                   aria-label='Favorite Game'
                   onChange={(event) => setFavorite(event.target.value)}
                   value={favorite}

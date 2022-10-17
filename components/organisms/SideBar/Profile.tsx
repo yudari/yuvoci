@@ -22,7 +22,7 @@ export default function Profile() {
       setUser(userFromPayload)
     }
   }, [])
-
+  console.log(user)
   return (
     <div className='user text-center pb-50 pe-30'>
       <img

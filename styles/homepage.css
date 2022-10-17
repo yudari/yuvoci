@@ -177,6 +177,10 @@
   max-width: 100%;
   height: auto;
 }
+
+.foto-diri {
+  border-radius: 20px;
+}
 /*  */
 
 /* Footer */

@@ -58,6 +58,7 @@ export interface CheckoutTypes {
   bank: string
   name: string
   accountUser: string
+  buktiBayar: string
 }
 
 export interface HistoryVoucherTopupTypes {
@@ -85,10 +86,11 @@ export interface HistoryTransactionTypes {
   tax: number
   name: string
   historyPayment: HistoryPaymentTypes
+  buktiBayar: string
 }
 
 export interface TopUpCategoriesTypes {
   _id: string
   value: number
-  name: string
+  thumbnial: string
 }

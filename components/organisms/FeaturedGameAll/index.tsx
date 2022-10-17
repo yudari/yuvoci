@@ -31,6 +31,7 @@ const FeaturedGameAll = () => {
           {allGame.map((item: GameItemTypes) => {
             return (
               <GameItem
+                status='home'
                 id={item._id}
                 key={item._id}
                 title={item.name}

@@ -33,9 +33,9 @@ export async function getGameCategory() {
   return axiosResponse.data
 }
 
-export async function setCheckout(data: CheckoutTypes) {
+export async function setCheckout(data: FormData) {
   const url = `${ROOT_API}/${API_VERSION}/players/checkout`
-
+  console.log(data)
   return callAPI({
     url,
     method: 'POST',

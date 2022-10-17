@@ -6,12 +6,13 @@ export interface GameItemProps {
   category: string
   thumbnial: string
   id: string
+  status: string
 }
 export default function GameItem(props: GameItemProps) {
-  const { title, category, thumbnial, id } = props
+  const { title, category, thumbnial, id, status } = props
   return (
     <div className='featured-game-card position-relative '>
-      <Link href={`detail/${id}`}>
+      <Link href={status === 'dashboard' ? `../detail/${id}` : `detail/${id}`}>
         <a>
           <div className='blur-sharp'>
             <Image

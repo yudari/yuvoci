@@ -30,6 +30,7 @@ export default function CheckoutDetail() {
     const dataFromLocal = localStorage.getItem('data-topup')
     const dataTopUpLocal = JSON.parse(dataFromLocal!)
     console.log(dataTopUpLocal)
+
     setDataTopUp(dataTopUpLocal)
   }, [])
   const itemPrice = dataTopUp.nominalItem.price
@@ -40,14 +41,17 @@ export default function CheckoutDetail() {
     <>
       <div className='purchase pt-md-50 pt-30'>
         <h2 className='fw-bold text-xl color-palette-1 mb-20'>
-          Purchase Details
+          Detail Pemesanan
         </h2>
         <p className='text-lg color-palette-1 mb-20'>
-          Your Game ID{' '}
+          ID Akun Game Kamu{' '}
           <span className='purchase-details fw-bold'>{dataTopUp.verifyID}</span>
         </p>
         <p className='text-lg color-palette-1 mb-20'>
-          Order ID <span className='purchase-details fw-bold'>#GG001</span>
+          ID Order{' '}
+          <span className='purchase-details fw-bold'>
+            {dataTopUp.nominalItem._id}
+          </span>
         </p>
         <p className='text-lg color-palette-1 mb-20'>
           Item{' '}
@@ -57,7 +61,7 @@ export default function CheckoutDetail() {
           </span>
         </p>
         <p className='text-lg color-palette-1 mb-20'>
-          Price{' '}
+          Harga{' '}
           <span className='purchase-details fw-bold'>
             {' '}
             <NumericFormat
@@ -70,7 +74,7 @@ export default function CheckoutDetail() {
           </span>
         </p>
         <p className='text-lg color-palette-1 mb-20'>
-          Tax (10%){' '}
+          Pajak (10%){' '}
           <span className='purchase-details fw-bold'>
             <NumericFormat
               value={tax}
@@ -96,35 +100,35 @@ export default function CheckoutDetail() {
       </div>
       <div className='payment pt-md-50 pb-md-50 pt-10 pb-10'>
         <h2 className='fw-bold text-xl color-palette-1 mb-20'>
-          Payment Informations
+          Informasi Pembayaran
         </h2>
         <p className='text-lg color-palette-1 mb-20'>
-          Your Account Name{' '}
+          Nama AKun Kamu{' '}
           <span className='purchase-details fw-bold'>
             {dataTopUp.bankAccountName}
           </span>
         </p>
 
         <p className='text-lg color-palette-1 mb-20'>
-          Type
+          Tipe Pembayaran
           <span className='payment-details fw-bold'>
             {dataTopUp.paymentItem.payment.type}
           </span>
         </p>
         <p className='text-lg color-palette-1 mb-20'>
-          Bank Name{' '}
+          Nama Bank{' '}
           <span className='payment-details fw-bold'>
             {dataTopUp.paymentItem.bank.bankName}
           </span>
         </p>
         <p className='text-lg color-palette-1 mb-20'>
-          Bank Account Name{' '}
+          Nama Akun Bank Admin{' '}
           <span className='payment-details fw-bold'>
             {dataTopUp.paymentItem.bank.name}
           </span>
         </p>
         <p className='text-lg color-palette-1 mb-20'>
-          Bank Number
+          Nomor Rekening Bank Admin
           <span className='payment-details fw-bold'>
             {dataTopUp.paymentItem.bank.noRekening}
           </span>

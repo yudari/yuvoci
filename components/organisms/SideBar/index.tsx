@@ -6,7 +6,7 @@ import MenuItem from './MenuItem'
 import Profile from './Profile'
 
 interface SideBarProps {
-  activeMenu?: 'overview' | 'transactions' | 'settings'
+  activeMenu?: 'overview' | 'transactions' | 'settings' | 'games'
 }
 
 export default function SideBar(props: SideBarProps) {
@@ -39,9 +39,13 @@ export default function SideBar(props: SideBarProps) {
             active={activeMenu === 'transactions'}
             href='/member/transactions'
           />
-          <MenuItem title='Messages' icon='ic-menu-messages' href='/member' />
-          <MenuItem title='Card' icon='ic-menu-card' href='/member' />
-          <MenuItem title='Rewards' icon='ic-menu-reward' href='/member' />
+          <MenuItem
+            active={activeMenu === 'games'}
+            title='Games'
+            icon='ic-menu-games'
+            href='/member/games'
+          />
+
           <MenuItem
             title='Settings'
             icon='ic-menu-setting'

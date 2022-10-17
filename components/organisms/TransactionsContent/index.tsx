@@ -30,7 +30,7 @@ export default function TransactionsContent() {
     setTab(value)
     getMemberTransactionAPI(value)
   }
-
+  console.log(transactions)
   const IMG = process.env.NEXT_PUBLIC_IMG
   return (
     <main className='main-wrapper'>
@@ -39,7 +39,9 @@ export default function TransactionsContent() {
           My Transactions
         </h2>
         <div className='mb-30'>
-          <p className='text-lg color-palette-2 mb-12'>You’ve spent</p>
+          <p className='text-lg color-palette-2 mb-12'>
+            Kamu Menghabiskan Uang
+          </p>
           <h3 className='text-5xl fw-medium color-palette-1'>
             <NumericFormat
               value={total}
@@ -78,7 +80,7 @@ export default function TransactionsContent() {
         </div>
         <div className='latest-transaction'>
           <p className='text-lg fw-medium color-palette-1 mb-14'>
-            Latest Transactions
+            Transaksi Terbaru
           </p>
           <div className='main-content main-content-table overflow-auto'>
             <table className='table table-borderless'>
@@ -90,6 +92,7 @@ export default function TransactionsContent() {
                   <th scope='col'>Item</th>
                   <th scope='col'>Price</th>
                   <th scope='col'>Status</th>
+                  <th scope='col'>Bukti</th>
                   <th scope='col'>Action</th>
                 </tr>
               </thead>
@@ -105,6 +108,7 @@ export default function TransactionsContent() {
                       item={`${transaction.historyVoucherTopup.coinQuantity} ${transaction.historyVoucherTopup.coinName}`}
                       status={transaction.status}
                       id={transaction._id}
+                      buktiBayar={`${IMG}/${transaction.buktiBayar}`}
                     />
                   )
                 })}

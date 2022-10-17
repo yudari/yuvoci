@@ -12,6 +12,16 @@ export async function getMemberOverview() {
   })
 }
 
+export async function getTopItemPayment() {
+  const url = `${ROOT_API}/${API_VERSION}/players/topgamepayment`
+
+  return callAPI({
+    url,
+    method: 'GET',
+    token: true,
+  })
+}
+
 export async function getMemberTransactions(valueParams: string) {
   let params = ''
   if (valueParams === 'all') {

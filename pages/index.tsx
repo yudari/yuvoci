@@ -10,6 +10,7 @@ import Story from '../components/organisms/Story'
 import Footer from '../components/organisms/Footer'
 import Head from 'next/head'
 import FeaturedGameAll from '../components/organisms/FeaturedGameAll'
+import AboutMe from '../components/organisms/AboutMe'
 const Home: NextPage = () => {
   useEffect(() => {
     AOS.init()
@@ -40,9 +41,9 @@ const Home: NextPage = () => {
       <Navbar />
       <MainBanner />
       <TransactionsStep />
-      <FeaturedGame />
+      {/* <FeaturedGame /> */}
       <FeaturedGameAll />
-
+      <AboutMe />
       {/* <Reached /> */}
       {/* <Story /> */}
       <Footer />

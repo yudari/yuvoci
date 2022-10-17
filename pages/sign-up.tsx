@@ -10,8 +10,9 @@ export default function SignUp() {
         <div>
           <div className='pb-50'>
             <Link href='/'>
-              <a className='navbar-brand'>
-                <Image src='/icon/logo.svg' width={60} height={60} alt='logo' />
+              <a className='navbar-brand text-brand'>
+                Yu<span className='text-brand-child'>Voci</span>
+                {/* <Image src='/icon/logo.svg' width={60} height={60} alt='logo' /> */}
               </a>
             </Link>
           </div>

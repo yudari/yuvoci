@@ -5,14 +5,14 @@ import {
   HistoryTransactionTypes,
   TopUpCategoriesTypes,
 } from '../../../services/data-types'
-import { getMemberOverview } from '../../../services/member'
+import { getMemberOverview, getTopItemPayment } from '../../../services/member'
 import Categori from './Categori'
 import TableRow from './TableRow'
 
 export default function OverviewContent() {
   const [count, setCount] = useState([])
   const [data, setData] = useState([])
-
+  const [dataTopItem, setDataTopItem] = useState([])
   const getMemberOverviewAPI = useCallback(async () => {
     const response = await getMemberOverview()
     if (response.error) {
@@ -20,26 +20,43 @@ export default function OverviewContent() {
     } else {
       setCount(response.data.count)
       setData(response.data.data)
+      console.log(response.data)
+    }
+  }, [])
+
+  const getTopItemPaymentAPI = useCallback(async () => {
+    const response = await getTopItemPayment()
+    if (response.error) {
+      toast.error(response.message)
+    } else {
+      setDataTopItem(response.data)
+      console.log(response.data)
     }
   }, [])
   useEffect(() => {
     getMemberOverviewAPI()
+    getTopItemPaymentAPI()
   }, [])
 
   const IMG = process.env.NEXT_PUBLIC_IMG
+  console.log(dataTopItem)
   return (
     <main className='main-wrapper'>
       <div className='ps-lg-0'>
         <h2 className='text-4xl fw-bold color-palette-1 mb-30'>Overview</h2>
         <div className='top-up-categories mb-30'>
           <p className='text-lg fw-medium color-palette-1 mb-14'>
-            Top Up Categories
+            Top Terbanyak Pembelian Top Up Kamu !!!
           </p>
           <div className='main-content'>
             <div className='row'>
-              {count.map((item: TopUpCategoriesTypes) => (
-                <Categori key={item._id} nominal={item.value} icon='ic-desktop'>
-                  {item.name}
+              {dataTopItem.map((item: TopUpCategoriesTypes) => (
+                <Categori
+                  key={item._id}
+                  nominal={item.value}
+                  thumbnial={`${IMG}/${item.thumbnial}`}
+                >
+                  {item._id}
                 </Categori>
               ))}
             </div>
@@ -47,7 +64,7 @@ export default function OverviewContent() {
         </div>
         <div className='latest-transaction'>
           <p className='text-lg fw-medium color-palette-1 mb-14'>
-            Latest Transactions
+            Transaksi Terbaru
           </p>
           <div className='main-content main-content-table overflow-auto'>
             <table className='table table-borderless'>

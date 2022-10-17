@@ -3,6 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import cx from 'classnames'
 import { NumericFormat } from 'react-number-format'
+import Image from 'next/image'
 interface TableRowProps {
   image: string
   title: string
@@ -11,9 +12,10 @@ interface TableRowProps {
   price: number
   status: string
   id: string
+  buktiBayar: string
 }
 export default function TableRow(props: TableRowProps) {
-  const { image, title, category, item, price, status, id } = props
+  const { image, title, category, item, price, status, id, buktiBayar } = props
 
   const statusClass = cx({
     'float-start icon-status': true,
@@ -21,6 +23,8 @@ export default function TableRow(props: TableRowProps) {
     failed: status === 'failed',
     success: status === 'success',
   })
+
+  console.log(buktiBayar)
 
   return (
     <tr data-category='pending' className='align-middle'>
@@ -64,8 +68,20 @@ export default function TableRow(props: TableRowProps) {
         </div>
       </td>
       <td>
+        {buktiBayar === 'http://localhost:4000/uploads/undefined' ? (
+          <p className='fw-medium color-palette-1 m-0'>Tidak ada</p>
+        ) : (
+          <Image
+            height={50}
+            width={50}
+            src={buktiBayar}
+            alt='img-bukti-bayar'
+          />
+        )}
+      </td>
+      <td>
         <Link href={`/member/transactions/${id}`}>
-          <a className='btn btn-status rounded-pill text-sm'>Details</a>
+          <a className='btn btn-status rounded-pill text-sm'>Detail</a>
         </Link>
       </td>
     </tr>

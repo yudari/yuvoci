@@ -254,14 +254,16 @@ export default function CompleteCheckout() {
         </div>
         <div className='pt-70 pb-50'>
           <h2 className='text-4xl fw-bold text-center color-palette-1 mb-10'>
-            Checkout Completed
+            Pemesanan Berhasil
           </h2>
           <p className='text-lg text-center color-palette-1 m-0'>
             Kami akan periksa pembayaran Anda
-            <br className='d-sm-block d-none' /> dan menghubungi via WhatsApp
+            <br className='d-sm-block d-none' /> dan tunggu konfirmasi status
+            dari
+            <br className='d-sm-block d-none' /> kami di dashboard anda
           </p>
         </div>
-        <div className='button-group d-flex flex-column mx-auto'>
+        <div className='button-group  d-flex flex-column mx-auto'>
           <Link href='/member'>
             <a className='btn btn-dashboard fw-medium text-lg text-white rounded-pill mb-16'>
               My Dashboard
