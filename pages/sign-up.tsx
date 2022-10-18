@@ -8,7 +8,7 @@ export default function SignUp() {
     <section className='sign-up mx-auto pt-lg-100 pb-lg-100 pt-30 pb-47'>
       <div className='container mx-auto'>
         <div>
-          <div className='pb-50'>
+          <div className='pb-50 d-flex justify-content-center'>
             <Link href='/'>
               <a className='navbar-brand text-brand'>
                 Yu<span className='text-brand-child'>Voci</span>
