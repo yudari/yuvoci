@@ -29,7 +29,6 @@ export default function Navbar() {
                 active={router.pathname === '/cara-belanja' && true}
               />
 
-              <Menu title={'Tentang'} />
               <Auth />
             </ul>
           </div>

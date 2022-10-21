@@ -79,19 +79,26 @@ export default function OverviewContent() {
                 </tr>
               </thead>
               <tbody>
-                {data.map((item: HistoryTransactionTypes) => {
-                  return (
-                    <TableRow
-                      key={item._id}
-                      title={item.historyVoucherTopup.gameName}
-                      categori={item.historyVoucherTopup.category}
-                      item={`${item.historyVoucherTopup.coinQuantity} ${item.historyVoucherTopup.coinName}`}
-                      price={item.value}
-                      status={item.status}
-                      image={`${IMG}/${item.historyVoucherTopup.thumbnail}`}
-                    />
-                  )
-                })}
+                {data.length !== 0 ? (
+                  data.map((item: HistoryTransactionTypes) => {
+                    return (
+                      <TableRow
+                        key={item._id}
+                        title={item.historyVoucherTopup.gameName}
+                        categori={item.historyVoucherTopup.category}
+                        item={`${item.historyVoucherTopup.coinQuantity} ${item.historyVoucherTopup.coinName}`}
+                        price={item.value}
+                        status={item.status}
+                        image={`${IMG}/${item.historyVoucherTopup.thumbnail}`}
+                      />
+                    )
+                  })
+                ) : (
+                  <h2 className='text-lg fw-medium color-palette-1'>
+                    Tidak ada transaksi
+                  </h2>
+                )}
+                {}
               </tbody>
             </table>
           </div>

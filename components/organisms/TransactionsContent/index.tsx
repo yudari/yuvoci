@@ -35,12 +35,10 @@ export default function TransactionsContent() {
   return (
     <main className='main-wrapper'>
       <div className='ps-lg-0'>
-        <h2 className='text-4xl fw-bold color-palette-1 mb-30'>
-          My Transactions
-        </h2>
+        <h2 className='text-4xl fw-bold color-palette-1 mb-30'>Transaksi Ku</h2>
         <div className='mb-30'>
           <p className='text-lg color-palette-2 mb-12'>
-            Kamu Menghabiskan Uang
+            Aku sudah menghabiskan uang
           </p>
           <h3 className='text-5xl fw-medium color-palette-1'>
             <NumericFormat
@@ -57,7 +55,7 @@ export default function TransactionsContent() {
             <div id='list_status_title'>
               <ButtonTab
                 onClick={() => onTabClick('all')}
-                title='All Trx'
+                title='All'
                 active={tab === 'all'}
               />
               <ButtonTab

@@ -65,11 +65,7 @@ export default function Auth() {
                 </a>
               </Link>
             </li>
-            <li>
-              <Link href='/'>
-                <a className='dropdown-item text-lg color-palette-2'>Wallet</a>
-              </Link>
-            </li>
+
             <li>
               <Link href='/member/edit-profile'>
                 <a className='dropdown-item text-lg color-palette-2'>
