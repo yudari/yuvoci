@@ -14,6 +14,7 @@ export async function getAllFeaturedGameAPI() {
   const URL = 'players/landingpage'
   const response = await axios.get(`${ROOT_API}/${API_VERSION}/${URL}`)
   const axiosResponse = response.data
+  console.log(axiosResponse)
   return axiosResponse.data
 }
 

@@ -16,7 +16,7 @@ export default function Checkout(props: CheckoutProps) {
   const [buktiBayar, setBuktiBayar] = useState(null)
   const [imagePreview, setImagePreview] = useState('./img/avatar-2.png')
   const [counter, setCounter] = useState(0)
-  const uploadBukti = (event) => {
+  const uploadBukti = (event: { target: { files: any } }) => {
     if (event.target.files!.length > 0) {
       const img = event.target.files![0]
       setImagePreview(URL.createObjectURL(img))

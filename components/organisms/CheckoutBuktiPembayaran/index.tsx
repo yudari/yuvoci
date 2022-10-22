@@ -1,6 +1,14 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from 'react'
+interface CheckoutBuktiPembayaranProps {
+  onChange: any
+  imagePreview: any
+}
 
-const CheckoutBuktiPembayaran = ({ onChange, imagePreview }) => {
+const CheckoutBuktiPembayaran = ({
+  onChange,
+  imagePreview,
+}: CheckoutBuktiPembayaranProps) => {
   const IMG = process.env.NEXT_PUBLIC_IMG
 
   return (

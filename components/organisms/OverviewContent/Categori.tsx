@@ -5,7 +5,7 @@ import { NumericFormat } from 'react-number-format'
 interface TopItemVoucherPaymentProps {
   children: ReactNode
   nominal: number
-  thumbnial: ''
+  thumbnial: string
 }
 export default function TopItemVoucherPayment(
   props: TopItemVoucherPaymentProps

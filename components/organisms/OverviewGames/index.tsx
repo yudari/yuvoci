@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useCallback, useEffect, useState } from 'react'
 import { GameItemTypes } from '../../../services/data-types'
 import { getAllFeaturedGameAPI } from '../../../services/player'

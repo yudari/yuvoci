@@ -2,7 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    // domains: ['storegg-learn.herokuapp.com'],
-    domains: ['localhost'],
+    domains: ['yuvoci-server.herokuapp.com'],
+    // domains: ['localhost'],
   },
 }

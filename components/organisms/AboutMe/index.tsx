@@ -16,7 +16,7 @@ const AboutMe = () => {
             <Image
               loading='lazy'
               className='foto-diri'
-              src={'http://localhost:3000/img/foto-diri.JPG'}
+              src={'/img/foto-diri.JPG'}
               height={700}
               width={500}
               alt='foto-diri'

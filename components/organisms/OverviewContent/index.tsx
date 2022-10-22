@@ -20,7 +20,6 @@ export default function OverviewContent() {
     } else {
       setCount(response.data.count)
       setData(response.data.data)
-      console.log(response.data)
     }
   }, [])
 
@@ -30,7 +29,6 @@ export default function OverviewContent() {
       toast.error(response.message)
     } else {
       setDataTopItem(response.data)
-      console.log(response.data)
     }
   }, [])
   useEffect(() => {
@@ -39,7 +37,7 @@ export default function OverviewContent() {
   }, [])
 
   const IMG = process.env.NEXT_PUBLIC_IMG
-  console.log(dataTopItem)
+
   return (
     <main className='main-wrapper'>
       <div className='ps-lg-0'>
@@ -50,15 +48,17 @@ export default function OverviewContent() {
           </p>
           <div className='main-content'>
             <div className='row'>
-              {dataTopItem.map((item: TopUpCategoriesTypes) => (
-                <Categori
-                  key={item._id}
-                  nominal={item.value}
-                  thumbnial={`${IMG}/${item.thumbnial}`}
-                >
-                  {item._id}
-                </Categori>
-              ))}
+              {dataTopItem.map((item: TopUpCategoriesTypes) => {
+                return (
+                  <Categori
+                    key={item._id}
+                    nominal={item.value}
+                    thumbnial={`${IMG}/${item.thumbnial}`}
+                  >
+                    {item._id}
+                  </Categori>
+                )
+              })}
             </div>
           </div>
         </div>

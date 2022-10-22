@@ -68,7 +68,8 @@ export default function TableRow(props: TableRowProps) {
         </div>
       </td>
       <td>
-        {buktiBayar === 'http://localhost:4000/uploads/undefined' ? (
+        {buktiBayar ===
+        'https://yuvoci-server.herokuapp.com/uploads/undefined' ? (
           <p className='fw-medium color-palette-1 m-0'>Tidak ada</p>
         ) : (
           <Image

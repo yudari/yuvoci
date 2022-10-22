@@ -3,7 +3,13 @@ import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 import { setCheckout } from '../../../services/player'
 
-export default function CheckoutConfirmation({ dataBuktiBayar }) {
+interface CheckoutConfirmationProps {
+  dataBuktiBayar: any
+}
+
+export default function CheckoutConfirmation({
+  dataBuktiBayar,
+}: CheckoutConfirmationProps) {
   const [checkbox, setCheckBox] = useState(false)
   const onSubmit = async () => {
     const dataItemLocal = localStorage.getItem('data-item')

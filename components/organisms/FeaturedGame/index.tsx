@@ -19,7 +19,7 @@ export default function FeaturedGame() {
   }, [])
 
   const API_IMG = process.env.NEXT_PUBLIC_IMG
-  console.log(gameList)
+
   return (
     <section className='featured-game pt-50 pb-50'>
       <div className='container-fluid'>
@@ -34,6 +34,7 @@ export default function FeaturedGame() {
           {gameList.map((item: GameItemTypes) => {
             return (
               <GameItem
+                status={item.status}
                 id={item._id}
                 key={item._id}
                 title={item.name}
