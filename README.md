@@ -31,7 +31,7 @@ Aplikasi ini dapat diakses pada link berikut : [yuvoci.vercel.app](https://yuvoc
 ### Halaman Transaksi Dashboard User
 ![Desktop Screenshot 2022 10 28 - 02 29 10 74](https://user-images.githubusercontent.com/43470163/198377994-5697b145-8f20-417e-8f84-b3c2cb798f19.png)
 ### Halaman Pengelolaan Akun Dashboard User
-![Desktop Screenshot 2022 10 28 - 02 29 50 75](https://user-images.githubusercontent.com/43470163/198378045-5e935158-40dc-4709-85a7-807d7a1596d8.png)
+![Desktop Screenshot 2022 10 28 - 02 29 59 90](https://user-images.githubusercontent.com/43470163/198378678-a9e936cb-9c89-4c0c-b8d3-5aefb1755a8f.png)
 ### Halaman Login User 
 ![Desktop Screenshot 2022 10 28 - 01 05 42 22](https://user-images.githubusercontent.com/43470163/198377698-3d66c712-9881-4a5c-856d-7c99ba97fecb.png)
 
