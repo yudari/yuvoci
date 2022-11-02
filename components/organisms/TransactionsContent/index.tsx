@@ -30,7 +30,7 @@ export default function TransactionsContent() {
     setTab(value)
     getMemberTransactionAPI(value)
   }
-  console.log(transactions)
+
   const IMG = process.env.NEXT_PUBLIC_IMG
   return (
     <main className='main-wrapper'>

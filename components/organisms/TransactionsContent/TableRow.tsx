@@ -24,7 +24,7 @@ export default function TableRow(props: TableRowProps) {
     success: status === 'success',
   })
 
-  console.log(buktiBayar)
+
 
   return (
     <tr data-category='pending' className='align-middle'>

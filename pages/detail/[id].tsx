@@ -25,7 +25,7 @@ export default function Detail({ dataItem, nominals, payments }: DetailProps) {
     localStorage.setItem('data-item', JSON.stringify(dataItem))
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-  console.log(payments)
+
   return (
     <>
       <Navbar />
@@ -77,7 +77,7 @@ export async function getStaticProps({ params }: GetStaticProps) {
   const { id } = params
 
   const data = await getDetailVoucher(id)
-  console.log(data.payment)
+
   return {
     props: {
       dataItem: data,

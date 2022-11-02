@@ -12,7 +12,7 @@ const AboutMe = () => {
           className='d-flex flex-lg-row flex-column gap-4'
           data-aos='fade-up'
         >
-          <div className='container-foto d-flex flex-column align-items-center col-lg-4 '>
+          {/* <div className='container-foto d-flex flex-column align-items-center col-lg-4 '>
             <Image
               loading='lazy'
               className='foto-diri'
@@ -24,9 +24,9 @@ const AboutMe = () => {
             <p className='text-3xl color-palette-1 text-center mt-3'>
               Yudha Satria <br /> Teknik Informatika
             </p>
-          </div>
+          </div> */}
 
-          <p className='text-2xl color-palette-2 col-lg-6 lh-lg'>
+          <p className='text-2xl color-palette-2 col-lg-6 lh-lg w-100'>
             YuVoci adalah website top up game yang dimana user dapat melakukan
             pembelian top up / kredit game dengan secara mudah. Website ini
             dibangun oleh saya sebagai programmer yang bertanggung jawab dalam
@@ -34,8 +34,7 @@ const AboutMe = () => {
             website ini menggunakan bahasa pemrograman javascript dengan pada
             sisi front end menggunakan Next Js sementara pada backend
             menggunakan Express js dan node js serta untuk database menggunakan
-            mongodb. aplikasi ini dibuat untuk menyelesaikan tugas akhir pada
-            mata kuliah pemrograman web
+            mongodb.
           </p>
         </div>
       </div>

@@ -14,7 +14,7 @@ export async function getAllFeaturedGameAPI() {
   const URL = 'players/landingpage'
   const response = await axios.get(`${ROOT_API}/${API_VERSION}/${URL}`)
   const axiosResponse = response.data
-  console.log(axiosResponse)
+
   return axiosResponse.data
 }
 
@@ -36,7 +36,7 @@ export async function getGameCategory() {
 
 export async function setCheckout(data: FormData) {
   const url = `${ROOT_API}/${API_VERSION}/players/checkout`
-  console.log(data)
+
   return callAPI({
     url,
     method: 'POST',

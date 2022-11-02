@@ -14,7 +14,7 @@ export default function CheckOutItems() {
     const dataItemLocal = JSON.parse(dataFromLocal!)
 
     setDataItem(dataItemLocal)
-    console.log(dataItemLocal)
+
   }, [])
   const IMG = process.env.NEXT_PUBLIC_IMG
   return (

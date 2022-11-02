@@ -58,7 +58,7 @@ export default function SignUpPhoto() {
     const getLocalForm = localStorage.getItem('user-form')
     setLocalForm(JSON.parse(getLocalForm!))
   }, [])
-  console.log()
+
   return (
     <section className='sign-up-photo mx-auto pt-lg-227 pb-lg-227 pt-130 pb-50'>
       <div className='container mx-auto'>
